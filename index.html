@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Calculer votre IMC</title>
+</head>
+<body>
+    <h1 class="title">Calculer votre IMC</h1>
+
+    <p class="intro-text">
+        Voici un calculateur d'IMC le but étant de m'exercer en Javascript
+        et en CSS. Afin de calculer votre IMC, veuillez renseigner votre
+        poids et votre taille.
+    </p>
+    <form>
+        <input
+            id="poids"
+            class="form"
+            type="text"
+            placeholder="Votre poids (en kg)"
+        />
+        <input
+            id="taille"
+            class="form"
+            type="text"
+            placeholder="Votre taille (en m)"
+        />
+        <button onclick="calculerIMC(event)" id="calculer" class="form">
+            Calculer
+        </button>
+
+        <p id="resultat" class="resultat">
+            Votre IMC est de <span id="imc"></span>
+        </p>
+
+        <div class="progress-bar">
+            <div class="progress"></div>
+            <span class="min-imc">IMC Min</span>
+            <span class="max-imc">IMC Max</span>
+            <span class="user-imc">Votre IMC</span>
+        </div>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
